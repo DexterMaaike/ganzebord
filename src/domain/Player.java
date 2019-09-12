@@ -4,17 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
-    private static List<Player> playerList=new ArrayList<>();
+    private static List<Player> playerList = new ArrayList<>();
     private boolean isDood = false;
     private int plaats = 0;
-    private boolean beurtOverslaan=false;
+    private boolean beurtOverslaan = false;
     private int aantalBeurtenOvergeslagen;
     private String naam;
 
-    public Player(String naam){
+    public Player(String naam) {
         setNaam(naam);
         playerList.add(this);
     }
+
     public int getPlaats() {
         return plaats;
     }

@@ -10,9 +10,9 @@ public class GanzeBordApp {
         System.out.println("Hoeveel spelers zijn er?");
         int aantalSpelers = Integer.parseInt(input.nextLine());
         Ganzebord ganzebord = new Ganzebord(aantalSpelers);
-        List<Player>spelersLijst=Player.getPlayerList();
-        while(true){
-            for(Player player:spelersLijst){
+        List<Player> spelersLijst = Player.getPlayerList();
+        while (true) {
+            for (Player player : spelersLijst) {
                 ganzebord.beurt(player);
             }
         }

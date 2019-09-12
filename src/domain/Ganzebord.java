@@ -47,7 +47,7 @@ public class Ganzebord {
             if (this.numberOfPlayers == 1) {
                 System.out.println(player.getNaam() + " heeft gewonnen!");
                 System.exit(0);
-            }else{
+            } else {
                 throw new LostPlayerException("Something went wrong. There are no more players in the game.");
             }
         }
@@ -57,7 +57,7 @@ public class Ganzebord {
         if (plek > 63) {
             int overschot = plek - 63;
             System.out.println("Je bent over de finish. Je moet weer " + overschot + " plaatsen terug.");
-            plek = 63-overschot;
+            plek = 63 - overschot;
         }
 
         switch (plek) {
