@@ -7,6 +7,8 @@ public class Player {
     private static List<Player> playerList=new ArrayList<>();
     private boolean isDood = false;
     private int plaats = 0;
+    private boolean beurtOverslaan=false;
+    private int aantalBeurtenOvergeslagen;
     private String naam;
 
     public Player(String naam){
@@ -43,5 +45,21 @@ public class Player {
 
     public static void setPlayerList(List<Player> playerList) {
         Player.playerList = playerList;
+    }
+
+    public boolean getBeurtOverslaan() {
+        return beurtOverslaan;
+    }
+
+    public void setBeurtOverslaan(boolean beurtOverslaan) {
+        this.beurtOverslaan = beurtOverslaan;
+    }
+
+    public int getAantalBeurtenOvergeslagen() {
+        return aantalBeurtenOvergeslagen;
+    }
+
+    public void setAantalBeurtenOvergeslagen(int aantalBeurtenOvergeslagen) {
+        this.aantalBeurtenOvergeslagen = aantalBeurtenOvergeslagen;
     }
 }
