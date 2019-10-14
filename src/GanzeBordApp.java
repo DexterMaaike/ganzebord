@@ -11,9 +11,10 @@ public class GanzeBordApp {
         int aantalSpelers = Integer.parseInt(input.nextLine());
         Ganzebord ganzebord = new Ganzebord(aantalSpelers);
         List<Player> spelersLijst = Player.getPlayerList();
-        while (true) {
+        boolean verderGaan = true;
+        while (verderGaan) {
             for (Player player : spelersLijst) {
-                ganzebord.beurt(player);
+                verderGaan = ganzebord.beurt(player);
             }
         }
     }

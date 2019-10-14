@@ -18,7 +18,7 @@ public class Ganzebord {
         }
     }
 
-    public void beurt(Player player) {
+    public boolean beurt(Player player) {
         if (this.numberOfPlayers > 1) {
             if (player.getBeurtOverslaan()) {
                 System.out.println(player.getNaam() + " slaat deze beurt over");
@@ -38,9 +38,11 @@ public class Ganzebord {
                     System.out.println("Je hebt " + number + " gegooid.");
                     plek += number;
                     plaatsActie(plek, number, player);
+                    return true;
                 } else {
                     System.out.println("Je hebt het spel beeindigd.");
-                    System.exit(0);
+                    return false;
+                    //System.exit(0);
                 }
             }
         } else {
@@ -51,6 +53,7 @@ public class Ganzebord {
                 throw new LostPlayerException("Something went wrong. There are no more players in the game.");
             }
         }
+        return true;
     }
 
     public void plaatsActie(int plek, int number, Player player) {
@@ -118,7 +121,7 @@ public class Ganzebord {
                 break;
 
         }
-        if (!input.nextLine().equals("")) {
+        if (!("".equals(input.nextLine()))) {
             System.exit(0);
         }
     }
